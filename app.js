@@ -13,9 +13,13 @@ const port = 5000;
 let connections = {};
 
 // Allow CORS
-app.use(cors);
-//io.origins('*:*');
-//io.transports = ['polling'];
+app.use(cors());
+io.origins('*:*');
+io.transports = ['polling'];
+
+app.get('/', (req, res, next) =>{
+  res.send('This route works.');
+});
 
 server.listen(5000, () => {
   console.log(`Server running on localhost:${port}`)

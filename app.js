@@ -13,7 +13,7 @@ const port = 5000;
 let connections = {};
 
 // Allow CORS
-app.use(cors());
+//app.use(cors());
 //io.origins('*:*');
 //io.transports = ['polling'];
 

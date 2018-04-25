@@ -29,6 +29,7 @@ io.on('connect', connectionHandler);
 
 function connectionHandler(client) {
   let name = client.handshake.query.name;
+  console.log(`${name} has connected.`);
 
   let nameFound = Object.values(connections).findIndex(ele => {
     return ele === name;

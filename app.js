@@ -2,6 +2,7 @@
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const path = require('path');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
@@ -12,6 +13,7 @@ const port = 5000;
 let connections = {};
 
 // Allow CORS
+app.use(cors);
 io.origins('*:*');
 
 server.listen(5000, () => {

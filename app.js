@@ -13,12 +13,12 @@ const port = 5000;
 let connections = {};
 
 // Allow CORS
-//app.use(cors());
-//io.origins('*:*');
+// app.use(cors());
+// io.origins('*:*');
 //io.transports = ['polling'];
 
-app.get('/', (req, res, next) =>{
-  res.send('This route works.');
+app.get('/connections', (req, res, next) =>{
+  res.send(connections);
 });
 
 server.listen(5000, () => {

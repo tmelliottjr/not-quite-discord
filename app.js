@@ -36,6 +36,7 @@ function connectionHandler(client) {
   });
 
   if (nameFound > -1) {
+    console.log('Name already taken. Notifying client and disconnecting session.');
     client.emit('connection-error', 'Name already taken.');
     client.disconnect();
     return;
@@ -48,7 +49,9 @@ function connectionHandler(client) {
     connections
   ]
 
+  console.log('Successful client connections.');
   client.emit('connection-success');
+  console.log('Broadcasting connection to all users.');
   io.emit('participant-connected', payload);
 
   client.on('disconnect', function(reason){

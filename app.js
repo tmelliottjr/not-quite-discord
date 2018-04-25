@@ -17,7 +17,7 @@ app.use(cors());
 // io.origins('*:*');
 //io.transports = ['polling'];
 
-app.get('connections', (req, res, next) =>{
+app.get('/connections', (req, res, next) =>{
   res.send(connections);
 });
 

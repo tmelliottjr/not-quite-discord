@@ -15,7 +15,7 @@ let connections = {};
 // Allow CORS
 app.use(cors);
 io.origins('*:*');
-io.transports = ['polling'];
+//io.transports = ['polling'];
 
 server.listen(5000, () => {
   console.log(`Server running on localhost:${port}`)

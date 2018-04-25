@@ -14,8 +14,8 @@ let connections = {};
 
 // Allow CORS
 app.use(cors());
-io.origins('*:*');
-io.transports = ['polling'];
+//io.origins('*:*');
+//io.transports = ['polling'];
 
 app.get('/', (req, res, next) =>{
   res.send('This route works.');

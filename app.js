@@ -11,6 +11,9 @@ const port = 5000;
 // Should be using memcached here
 let connections = {};
 
+// Allow CORS
+io.origins('*:*');
+
 server.listen(5000, () => {
   console.log(`Server running on localhost:${port}`)
 })

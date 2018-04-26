@@ -13,17 +13,16 @@ const port = 5000;
 let connections = {};
 
 // Allow CORS
-app.use(cors());
+//app.use(cors());
 
+server.listen(5000, () => {
+  console.log(`Server running on localhost:${port}`)
+})
 
 app.get('/connections', (req, res) =>{
   console.log('Getting connections.');
   res.send(connections);
 });
-
-server.listen(5000, () => {
-  console.log(`Server running on localhost:${port}`)
-})
 
 io.on('connect', connectionHandler);
 

@@ -17,7 +17,7 @@ let connections = {};
 //io.origins('*:*');
 //io.transports = ['polling'];
 
-app.get('/connections', (req, res, next) =>{
+app.get('/connections', (req, res) =>{
   console.log('Getting connections.');
   res.send('test');
 });

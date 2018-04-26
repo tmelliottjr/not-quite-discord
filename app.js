@@ -13,9 +13,8 @@ const port = 5000;
 let connections = {};
 
 // Allow CORS
-//app.use(cors());
-//io.origins('*:*');
-//io.transports = ['polling'];
+app.use(cors());
+
 
 app.get('/connections', (req, res) =>{
   console.log('Getting connections.');
@@ -53,7 +52,7 @@ function connectionHandler(client) {
   console.log('Successful client connections.');
   client.emit('connection-success');
   console.log('Broadcasting connection to all users.');
-  io.emit('participant-connected', payload);
+  io.sockets.emit('participant-connected', payload);
 
   client.on('disconnect', function(reason){
     disconnectHandler(client, reason);

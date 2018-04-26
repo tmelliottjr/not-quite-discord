@@ -19,7 +19,7 @@ let connections = {};
 
 app.get('/connections', (req, res, next) =>{
   console.log('Getting connections.');
-  res.send(connections);
+  res.send('test');
 });
 
 server.listen(5000, () => {

@@ -9,10 +9,8 @@ const io = require('socket.io')(server);
 const sanitize = require('./helpers/sanitize')
 const port = 5000;
 
-// Should be using memcached here
 let connections = {};
 
-// Allow CORS
 app.use(cors());
 app.options('*', cors());
 

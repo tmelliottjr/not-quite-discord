@@ -21,6 +21,7 @@ server.listen(port, () => {
 app.get('/connections', (req, res) =>{
   console.log('Getting connections.');
   res.send(connections);
+  return;
 });
 
 io.on('connect', connectionHandler);

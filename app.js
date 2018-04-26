@@ -14,6 +14,8 @@ let connections = {};
 //app.use(cors());
 //app.options('*', cors());
 
+io.transports = ['websocket'];
+
 server.listen(port, () => {
   console.log(`Server running on localhost:${port}`)
 })

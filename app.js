@@ -11,10 +11,10 @@ const port = 5000;
 
 let connections = {};
 
-app.use(cors());
-app.options('*', cors());
+//app.use(cors());
+//app.options('*', cors());
 
-server.listen(5000, () => {
+server.listen(port, () => {
   console.log(`Server running on localhost:${port}`)
 })
 

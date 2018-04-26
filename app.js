@@ -11,7 +11,7 @@ const port = 5000;
 
 let connections = {};
 
-//app.use(cors());
+app.use(cors());
 //app.options('*', cors());
 
 io.transports = ['websocket'];
